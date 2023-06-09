@@ -1,0 +1,17 @@
+<div class="container">    
+    <br><br>
+    <input type="text" class="form-control" [(ngModel)]="newTodo" placeholder="Add a new todo"> 
+    <br>
+    <button class="btn btn-primary" (click)="addTodo()">Add</button>
+</div>
+
+<br>
+
+<div class="container">
+    <ul>
+        <li  style="height: 50px;" *ngFor="let todo of todos">
+          {{ todo }}
+          <button class="btn btn-primary" (click)="removeTodo(todo)">Remove</button>
+        </li>
+      </ul>
+</div>
